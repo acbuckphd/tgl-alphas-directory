@@ -74,7 +74,7 @@
       "name": "Rob Rusher",
       "role": "General Member",
       "line": "Tau Gamma Lambda",
-      "group": "Active Roster",
+      "group": "Chapter Member",
       "chapterStatus": "Active",
       "email": "rushermd@gmail.com",
       "phone": "",
@@ -84,7 +84,7 @@
       "name": "Stephon Hayes",
       "role": "General Member",
       "line": "Tau Gamma Lambda",
-      "group": "Active Roster",
+      "group": "Charter Member",
       "chapterStatus": "Active",
       "email": "sahayes06@gmail.com",
       "phone": "",
@@ -94,7 +94,7 @@
       "name": "W. Keith Harris",
       "role": "General Member",
       "line": "Tau Gamma Lambda",
-      "group": "Active Roster",
+      "group": "Charter Member",
       "chapterStatus": "Active",
       "email": "keith1906@att.net",
       "phone": "",
@@ -124,7 +124,7 @@
       "name": "Glendell Brown",
       "role": "General Member",
       "line": "Tau Gamma Lambda",
-      "group": "Active Roster",
+      "group": "Charter Member",
       "chapterStatus": "Active",
       "email": "glendellbrown1906@gmail.com",
       "phone": "",
@@ -311,14 +311,14 @@
       "profession": ""
     },
     {
-      "name": "Horace Buck, Ph.D.",
-      "role": "Director of Technology / Committee Chair",
-      "line": "Fall '08 - Alpha Chapter",
-      "group": "2000s",
-      "chapterStatus": "Life Member",
-      "email": "horaceb@gmail.com",
-      "phone": "(404) 555-0199",
-      "profession": "Education & Systems Architecture"
+      "name": "Horace Buckley",
+      "role": "Recording Secretary",
+      "line": "Spring'26 - Tau Gamma Lambda",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "horaceb1906@gmail.com",
+      "phone": "678-760-9669",
+      "profession": "Assistant Director, Student Support, Gwinnett Schools"
     },
     {
       "name": "Mickey Foster",
@@ -348,7 +348,7 @@
       "chapterStatus": "Active",
       "email": "joelacie1906@gmail.com",
       "phone": "412-737-2891",
-      "profession": "Attorney"
+      "profession": "Business Consultant"
     }
   ]
 }
