@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tau Gamma Lambda | North Fulton Alphas Membership Directory</title>
+  <style>
+    :root {
+      --gold-primary: #D4AF37;
+      --gold-dark: #B8860B;
+      --gold-light: #F3E5AB;
+      --black-bg: #0d0f12;
+      --black-surface: #161a1e;
+      --black-card: #1c2127;
+      --black-card-hover: #222831;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: rgba(212, 175, 55, 0.25);
+      --border-accent: rgba(212, 175, 55, 0.6);
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--black-bg);
+      color: var(--text-main);
+      padding: 2.5rem 1rem;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Header Banner */
+    .header-banner {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      background: radial-gradient(circle at top, #232931 0%, var(--black-surface) 100%);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .chapter-badge {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--border-color);
+      padding: 0.35rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .header-title {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #FFF 30%, var(--gold-light) 70%, var(--gold-primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 1.5rem auto;
+      line-height: 1.5;
+    }
+
+    .action-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.7rem 1.25rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%);
+      color: #000;
+      border: none;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+    }
+
+    .btn-gold:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--gold-primary);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-outline:hover {
+      background: rgba(212, 175, 55, 0.08);
+      border-color: var(--gold-primary);
+    }
+
+    /* Search & Filter Controls */
+    .controls-card {
+      background: var(--black-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--black-card);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+      font-size: 1rem;
+      padding: 0.85rem 1.2rem;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.2s;
+      margin-bottom: 1.25rem;
+    }
+
+    .search-input:focus {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+    }
+
+    .filter-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-primary);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .pills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .pill-btn {
+      background: var(--black-card);
+      color: var(--text-muted);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 0.45rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+
+    .pill-btn:hover {
+      color: var(--text-main);
+      border-color: var(--gold-primary);
+    }
+
+    .pill-btn.active {
+      background: var(--gold-primary);
+      color: #000;
+      font-weight: 700;
+      border-color: var(--gold-primary);
+    }
+
+    .pill-count {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 0.15rem 0.45rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+    }
+
+    .pill-btn.active .pill-count {
+      background: rgba(0, 0, 0, 0.4);
+      color: #FFF;
+    }
+
+    /* Group Section & Cards */
+    .group-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .group-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .group-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .group-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+
+    .group-badge {
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--gold-primary);
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    .btn-copy-group {
+      background: transparent;
+      color: var(--gold-primary);
+      border: 1px solid var(--border-color);
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .btn-copy-group:hover {
+      background: var(--gold-primary);
+      color: #000;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .member-card {
+      background: var(--black-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .member-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-accent);
+      background: var(--black-card-hover);
+    }
+
+    .card-top {
+      margin-bottom: 1rem;
+    }
+
+    .member-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #FFF;
+      margin-bottom: 0.25rem;
+    }
+
+    .member-role {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--gold-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .member-line {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      font-style: italic;
+    }
+
+    /* Fraternal Status Badges */
+    .status-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-life {
+      background: rgba(212, 175, 55, 0.2);
+      color: var(--gold-primary);
+      border: 1px solid var(--gold-primary);
+    }
+
+    .badge-active {
+      background: rgba(34, 197, 94, 0.15);
+      color: #4ade80;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+
+    .badge-reclaiming {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    /* Contact Details */
+    .card-details {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .detail-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      word-break: break-all;
+      transition: color 0.2s;
+    }
+
+    .detail-link:hover {
+      color: var(--gold-light);
+      text-decoration: underline;
+    }
+
+    .btn-copy-small {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+      border-radius: 4px;
+      padding: 0.2rem 0.4rem;
+      cursor: pointer;
+      font-size: 0.75rem;
+    }
+
+    .btn-copy-small:hover {
+      color: #FFF;
+      border-color: var(--gold-primary);
+    }
+
+    /* Toast Notification */
+    #toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--gold-primary);
+      color: #000;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      transform: translateY(150%);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    #toast.show {
+      transform: translateY(0);
+    }
+
+    @media print {
+      body { background: #FFF; color: #000; padding: 0; }
+      .header-banner, .controls-card, .btn, .btn-copy-group, .btn-copy-small { display: none !important; }
+      .member-card { border: 1px solid #ccc; page-break-inside: avoid; color: #000; }
+      .member-name { color: #000; }
+      .member-role { color: #333; }
+      .detail-link { color: #000; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Chapter Header -->
+    <header class="header-banner">
+      <span class="chapter-badge">Alpha Phi Alpha Fraternity, Inc.</span>
+      <h1 class="header-title">Tau Gamma Lambda Chapter</h1>
+      <p class="header-subtitle">Official Chapter Brotherhood Directory & Listserv • North Fulton Alphas</p>
+      
+      <div class="action-row">
+        <button class="btn btn-gold" onclick="copyAllEmails()">&#128233; Copy Full Chapter Listserv</button>
+        <button class="btn btn-outline" onclick="window.print()">&#128438; Print / Save PDF Roster</button>
+      </div>
+    </header>
+
+    <!-- Search & Filter Controls -->
+    <section class="controls-card">
+      <input 
+        type="text" 
+        id="searchInput" 
+        class="search-input" 
+        placeholder="Search Brother by name, initiate line, chapter office, or profession..."
+        onkeyup="filterDashboard()"
+      />
+      <span class="filter-label">Filter by Line / Generation</span>
+      <div id="filterPills" class="pills-container"></div>
+    </section>
+
+    <!-- Dynamic Directory Target -->
+    <main id="directoryContainer"></main>
+
+  </div>
+
+  <div id="toast">Copied to clipboard!</div>
+
+  <script>
+    let membersData = [];
+    let groupEmailsMap = {};
+    let activeFilter = 'ALL';
+
+    // 1. Data Ingestion from members.json with Cache-Buster
+    async function loadMembers() {
+      try {
+        const response = await fetch('members.json?t=' + new Date().getTime());
+        const result = await response.json();
+        
+        // Resilient array parsing
+        membersData = Array.isArray(result)
+          ? result
+          : (result.members || result.Brothers || Object.values(result)[0] || []);
+        
+        renderDashboard();
+      } catch (err) {
+        console.error("Failed to fetch members.json", err);
+        document.getElementById("directoryContainer").innerHTML = `
+          <div style="text-align: center; padding: 3rem; color: var(--text-muted); border: 1px dashed var(--border-color); border-radius: 12px;">
+            <p>Unable to load membership roster. Confirm <code>members.json</code> exists and is accessible.</p>
+          </div>
+        `;
+      }
+    }
+
+    // 2. Main Dashboard Render
+    function renderDashboard() {
+      const container = document.getElementById("directoryContainer");
+      const pillsContainer = document.getElementById("filterPills");
+      container.innerHTML = "";
+      pillsContainer.innerHTML = "";
+      groupEmailsMap = {};
+
+      // Defensive Grouping (Defaulting to 'group' or 'decade' or 'lineYear')
+      const grouped = {};
+      membersData.forEach(m => {
+        const groupKey = m.group || m.decade || (m.line ? parseDecade(m.line) : 'Brotherhood');
+        if (!grouped[groupKey]) {
+          grouped[groupKey] = { title: groupKey, brothers: [] };
+          groupEmailsMap[groupKey] = [];
+        }
+        grouped[groupKey].brothers.push(m);
+        if (m.email) groupEmailsMap[groupKey].push(m.email);
+      });
+
+      const groupKeys = Object.keys(grouped).sort((a, b) => b.localeCompare(a));
+
+      // Render "All Brothers" Pill
+      const allPill = document.createElement("button");
+      allPill.className = "pill-btn active";
+      allPill.innerHTML = `All Brothers <span class="pill-count">${membersData.length}</span>`;
+      allPill.onclick = () => filterByGroup('ALL', allPill);
+      pillsContainer.appendChild(allPill);
+
+      // Render Specific Group Filter Pills
+      groupKeys.forEach(grp => {
+        const pill = document.createElement("button");
+        pill.className = "pill-btn";
+        pill.innerHTML = `${grp} <span class="pill-count">${grouped[grp].brothers.length}</span>`;
+        pill.onclick = () => filterByGroup(grp, pill);
+        pillsContainer.appendChild(pill);
+      });
+
+      // Render Group Sections & Cards
+      groupKeys.forEach(grp => {
+        const sec = document.createElement("section");
+        sec.className = "group-section";
+        sec.setAttribute("data-group", grp);
+
+        sec.innerHTML = `
+          <div class="group-header">
+            <div class="group-title-wrap">
+              <h2 class="group-name">${grp}</h2>
+              <span class="group-badge">${grouped[grp].brothers.length} Brother${grouped[grp].brothers.length > 1 ? 's' : ''}</span>
+            </div>
+            <button class="btn-copy-group" onclick="copyGroupEmails('${grp}')">Copy ${grp} Emails</button>
+          </div>
+          <div class="cards-grid"></div>
+        `;
+        container.appendChild(sec);
+
+        // Scoped query selector to avoid invalid character/space DOM bugs
+        const grid = sec.querySelector('.cards-grid');
+
+        grouped[grp].brothers.forEach(m => {
+          // Status Badge Evaluation
+          let badgeHtml = '';
+          const stat = (m.chapterStatus || m.status || '').toLowerCase();
+          if (stat.includes('life')) {
+            badgeHtml = `<span class="status-badge badge-life">&#9733; Life Member</span>`;
+          } else if (stat.includes('reclaim')) {
+            badgeHtml = `<span class="status-badge badge-reclaiming">Reclaiming</span>`;
+          } else {
+            badgeHtml = `<span class="status-badge badge-active">Active</span>`;
+          }
+
+          const card = document.createElement("article");
+          card.className = "member-card";
+          card.setAttribute("data-group", grp);
+
+          card.innerHTML = `
+            <div class="card-top">
+              <h3 class="member-name">${m.name || 'Unnamed Brother'}</h3>
+              <div class="member-role">${m.role || 'General Member'}</div>
+              <div class="member-line">${m.line || ''}</div>
+              ${badgeHtml}
+            </div>
+            <div class="card-details">
+              ${m.email ? `
+              <div class="detail-row">
+                <a href="mailto:${m.email}" class="detail-link">${m.email}</a>
+                <button class="btn-copy-small" title="Copy Email" onclick="copyText('${m.email}')">&#128203;</button>
+              </div>` : ''}
+              ${m.phone ? `
+              <div class="detail-row">
+                <a href="tel:${String(m.phone).replace(/[^0-9]/g, '')}" class="detail-link">${m.phone}</a>
+              </div>` : ''}
+              ${m.profession ? `
+              <div class="detail-row" style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.2rem;">
+                <span>Profession: ${m.profession}</span>
+              </div>` : ''}
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      });
+    }
+
+    // Defensive decade parser if not provided explicitly in JSON
+    function parseDecade(lineStr) {
+      const match = lineStr.match(/\b(19\d{2}|20\d{2}|'\d{2})\b/);
+      if (match) {
+        let yr = match[0].replace("'", '');
+        if (yr.length === 2) yr = (parseInt(yr, 10) > 40 ? '19' : '20') + yr;
+        const decade = yr.substring(0, 3) + '0s';
+        return decade;
+      }
+      return 'Active Roster';
+    }
+
+    // 3. Filtering Logic
+    function filterByGroup(groupKey, pillElement) {
+      activeFilter = groupKey;
+      document.querySelectorAll(".pill-btn").forEach(p => p.classList.remove("active"));
+      pillElement.classList.add("active");
+      filterDashboard();
+    }
+
+    function filterDashboard() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const sections = document.querySelectorAll(".group-section");
+
+      sections.forEach(sec => {
+        const secGroup = sec.getAttribute("data-group");
+        const cards = sec.querySelectorAll(".member-card");
+        let visibleInSec = 0;
+
+        cards.forEach(card => {
+          const text = card.innerText.toLowerCase();
+          const matchesQuery = text.includes(query);
+          const matchesGroup = (activeFilter === 'ALL' || secGroup === activeFilter);
+
+          if (matchesQuery && matchesGroup) {
+            card.style.display = "flex";
+            visibleInSec++;
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        // Hide empty group headers
+        sec.style.display = visibleInSec > 0 ? "block" : "none";
+      });
+    }
+
+    // 4. Clipboard Operations
+    function copyText(txt) {
+      navigator.clipboard.writeText(txt).then(() => showToast(`Copied: ${txt}`));
+    }
+
+    function copyGroupEmails(grp) {
+      const emails = (groupEmailsMap[grp] || []).filter(Boolean);
+      if (!emails.length) return showToast("No emails found for this group.");
+      navigator.clipboard.writeText(emails.join(", ")).then(() => {
+        showToast(`Copied ${emails.length} emails from ${grp}!`);
+      });
+    }
+
+    function copyAllEmails() {
+      const all = membersData.map(m => m.email).filter(Boolean);
+      if (!all.length) return showToast("No emails found.");
+      navigator.clipboard.writeText(all.join(", ")).then(() => {
+        showToast(`Copied ${all.length} chapter emails to clipboard!`);
+      });
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById("toast");
+      t.innerText = msg;
+      t.classList.add("show");
+      setTimeout(() => t.classList.remove("show"), 2500);
+    }
+
+    window.onload = loadMembers;
+  </script>
+</body>
+</html>
