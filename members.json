@@ -349,6 +349,99 @@
       "email": "joelacie1906@gmail.com",
       "phone": "412-737-2891",
       "profession": "Business Consultant"
+
+      [
+  {
+    "name": "Christopher Greene",
+    "role": "General Member",
+    "line": "Tau Gamma Lambda",
+    "group": "Active Roster",
+    "chapterStatus": "Active",
+    "email": "chrisgreenecontracts@gmail.com",
+    "phone": "256-509-5178",
+    "profession": ""
+  },
+  {
+    "name": "Deshon Robinson",
+    "role": "General Member",
+    "line": "Tau Gamma Lambda",
+    "group": "Active Roster",
+    "chapterStatus": "Active",
+    "email": "Deshon.robinson12@gmail.com",
+    "phone": "909-641-3001",
+    "profession": ""
+  },
+  {
+    "name": "Fred Green",
+    "role": "General Member",
+    "line": "Tau Gamma Lambda",
+    "group": "Active Roster",
+    "chapterStatus": "Active",
+    "email": "",
+    "phone": "770-714-4116",
+    "profession": "Retired Banker"
+  },
+  {
+    "name": "Jakai Braithwaite",
+    "role": "General Member",
+    "line": "Tau Gamma Lambda",
+    "group": "Active Roster",
+    "chapterStatus": "Active",
+    "email": "jakai1906@gmail.com",
+    "phone": "",
+    "profession": ""
+  },
+  {
+    "name": "Jeffrey Malcolm",
+    "role": "General Member",
+    "line": "Tau Gamma Lambda",
+    "group": "Active Roster",
+    "chapterStatus": "Active",
+    "email": "",
+    "phone": "678-613-1703",
+    "profession": "Investment Specialist"
+  },
+    {
+    "name": "Marshal Shepherd",
+    "role": "General Member",
+    "line": "Tau Gamma Lambda",
+    "group": "Active Roster",
+    "chapterStatus": "Active",
+    "email": "marshgeo@gmail.com",
+    "phone": "404-783-2742",
+    "profession": "Professor- UGA"
+  },
+  {
+    "name": "Rodney Spottsville",
+    "role": "General Member",
+    "line": "Tau Gamma Lambda",
+    "group": "Active Roster",
+    "chapterStatus": "Active",
+    "email": "",
+    "phone": "828-280-3479",
+    "profession": "Retired-Engineer"
+  },
+  {
+    "name": "Tommie Williamson",
+    "role": "General Member",
+    "line": "Tau Gamma Lambda",
+    "group": "Active Roster",
+    "chapterStatus": "Active",
+    "email": "twill1906@gmail.com",
+    "phone": "770-401-0852",
+    "profession": ""
+  },
+  {
+    "name": "Walter Gregory",
+    "role": "General Member",
+    "line": "Tau Gamma Lambda",
+    "group": "Active Roster",
+    "chapterStatus": "Active",
+    "email": "",
+    "phone": "404-353-2275",
+    "profession": ""
+  }
+]
     }
   ]
 }
