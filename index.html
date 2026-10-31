@@ -39,7 +39,6 @@
       margin: 0 auto;
     }
 
-    /* Header Banner */
     .header-banner {
       text-align: center;
       padding: 2.5rem 1.5rem;
@@ -125,7 +124,7 @@
       border-color: var(--gold-primary);
     }
 
-    /* Search & Filter Controls */
+    /* Controls */
     .controls-card {
       background: var(--black-surface);
       border: 1px solid var(--border-color);
@@ -207,20 +206,32 @@
       color: #FFF;
     }
 
-    /* Group Section & Cards */
+    /* Group Accordions */
     .group-section {
-      margin-bottom: 2.5rem;
+      background: var(--black-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .group-section.open {
+      border-color: var(--gold-primary);
     }
 
     .group-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid var(--border-color);
-      padding-bottom: 0.75rem;
-      margin-bottom: 1.25rem;
-      flex-wrap: wrap;
-      gap: 0.75rem;
+      padding: 1.25rem 1.5rem;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.2s;
+    }
+
+    .group-header:hover {
+      background: rgba(212, 175, 55, 0.05);
     }
 
     .group-title-wrap {
@@ -230,7 +241,7 @@
     }
 
     .group-name {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 700;
       color: var(--gold-light);
     }
@@ -239,9 +250,15 @@
       background: rgba(212, 175, 55, 0.15);
       color: var(--gold-primary);
       font-size: 0.75rem;
-      padding: 0.25rem 0.6rem;
+      padding: 0.25rem 0.65rem;
       border-radius: 12px;
       font-weight: 600;
+    }
+
+    .group-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
 
     .btn-copy-group {
@@ -261,10 +278,32 @@
       color: #000;
     }
 
+    .toggle-indicator {
+      font-size: 1.1rem;
+      color: var(--gold-primary);
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .group-section.open .toggle-indicator {
+      transform: rotate(180deg);
+    }
+
+    .cards-grid-wrapper {
+      display: none;
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    .group-section.open .cards-grid-wrapper {
+      display: block;
+    }
+
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 1.25rem;
+      margin-top: 1.25rem;
     }
 
     .member-card {
@@ -289,7 +328,7 @@
     }
 
     .member-name {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: #FFF;
       margin-bottom: 0.25rem;
@@ -309,7 +348,6 @@
       font-style: italic;
     }
 
-    /* Fraternal Status Badges */
     .status-badge {
       display: inline-block;
       font-size: 0.75rem;
@@ -332,13 +370,6 @@
       border: 1px solid rgba(34, 197, 94, 0.3);
     }
 
-    .badge-reclaiming {
-      background: rgba(245, 158, 11, 0.15);
-      color: #fbbf24;
-      border: 1px solid rgba(245, 158, 11, 0.3);
-    }
-
-    /* Contact Details */
     .card-details {
       border-top: 1px solid rgba(255, 255, 255, 0.06);
       padding-top: 0.85rem;
@@ -358,7 +389,6 @@
       color: var(--text-muted);
       text-decoration: none;
       word-break: break-all;
-      transition: color 0.2s;
     }
 
     .detail-link:hover {
@@ -381,7 +411,6 @@
       border-color: var(--gold-primary);
     }
 
-    /* Toast Notification */
     #toast {
       position: fixed;
       bottom: 2rem;
@@ -401,22 +430,12 @@
     #toast.show {
       transform: translateY(0);
     }
-
-    @media print {
-      body { background: #FFF; color: #000; padding: 0; }
-      .header-banner, .controls-card, .btn, .btn-copy-group, .btn-copy-small { display: none !important; }
-      .member-card { border: 1px solid #ccc; page-break-inside: avoid; color: #000; }
-      .member-name { color: #000; }
-      .member-role { color: #333; }
-      .detail-link { color: #000; text-decoration: none; }
-    }
   </style>
 </head>
 <body>
 
   <div class="container">
     
-    <!-- Chapter Header -->
     <header class="header-banner">
       <span class="chapter-badge">Alpha Phi Alpha Fraternity, Inc.</span>
       <h1 class="header-title">Tau Gamma Lambda Chapter</h1>
@@ -428,20 +447,19 @@
       </div>
     </header>
 
-    <!-- Search & Filter Controls -->
     <section class="controls-card">
       <input 
         type="text" 
         id="searchInput" 
         class="search-input" 
         placeholder="Search Brother by name, initiate line, chapter office, or profession..."
-        onkeyup="filterDashboard()"
+        onkeyup="handleSearch()"
       />
-      <span class="filter-label">Filter by Line / Generation</span>
+      <span class="filter-label">Filter by Chapter Group</span>
       <div id="filterPills" class="pills-container"></div>
     </section>
 
-    <!-- Dynamic Directory Target -->
+    <!-- Group Accordions Render Here -->
     <main id="directoryContainer"></main>
 
   </div>
@@ -449,113 +467,168 @@
   <div id="toast">Copied to clipboard!</div>
 
   <script>
-    let membersData = [];
+    let rawMembers = [];
+    let groupMap = {};
     let groupEmailsMap = {};
-    let activeFilter = 'ALL';
+    let currentSelectedGroup = 'ALL';
 
-    // 1. Data Ingestion from members.json with Cache-Buster
+    // The primary groups
+    const PRIMARY_GROUPS = [
+      "Officers",
+      "Charter Members",
+      "Life Members",
+      "Active Roster"
+    ];
+
+    function isOfficer(m) {
+      const role = (m.role || '').toLowerCase();
+      const grp = (m.group || '').toLowerCase();
+      if (grp.includes('officer')) return true;
+      if (!role || role === 'general member') return false;
+      return true;
+    }
+
+    function isCharterMember(m) {
+      const grp = (m.group || '').toLowerCase();
+      return grp.includes('charter');
+    }
+
+    function isLifeMember(m) {
+      const status = (m.chapterStatus || '').toLowerCase();
+      const grp = (m.group || '').toLowerCase();
+      return status.includes('life') || grp.includes('life');
+    }
+
     async function loadMembers() {
       try {
         const response = await fetch('members.json?t=' + new Date().getTime());
-        const result = await response.json();
-        
-        // Resilient array parsing
-        membersData = Array.isArray(result)
-          ? result
-          : (result.members || result.Brothers || Object.values(result)[0] || []);
-        
+        const data = await response.json();
+        rawMembers = Array.isArray(data) ? data : (data.members || []);
+        buildGroupData();
         renderDashboard();
       } catch (err) {
-        console.error("Failed to fetch members.json", err);
+        console.error("Error loading roster:", err);
         document.getElementById("directoryContainer").innerHTML = `
           <div style="text-align: center; padding: 3rem; color: var(--text-muted); border: 1px dashed var(--border-color); border-radius: 12px;">
-            <p>Unable to load membership roster. Confirm <code>members.json</code> exists and is accessible.</p>
+            <p>Unable to load membership roster. Confirm <code>members.json</code> is accessible.</p>
           </div>
         `;
       }
     }
 
-    // 2. Main Dashboard Render
+    function buildGroupData() {
+      groupMap = {
+        "Officers": [],
+        "Charter Members": [],
+        "Life Members": [],
+        "Active Roster": []
+      };
+      groupEmailsMap = {
+        "Officers": [],
+        "Charter Members": [],
+        "Life Members": [],
+        "Active Roster": []
+      };
+
+      rawMembers.forEach(m => {
+        let placedInSpecialGroup = false;
+
+        // 1. Officers
+        if (isOfficer(m)) {
+          groupMap["Officers"].push(m);
+          if (m.email) groupEmailsMap["Officers"].push(m.email);
+          placedInSpecialGroup = true;
+        }
+
+        // 2. Charter Members
+        if (isCharterMember(m)) {
+          groupMap["Charter Members"].push(m);
+          if (m.email) groupEmailsMap["Charter Members"].push(m.email);
+          placedInSpecialGroup = true;
+        }
+
+        // 3. Life Members
+        if (isLifeMember(m)) {
+          groupMap["Life Members"].push(m);
+          if (m.email) groupEmailsMap["Life Members"].push(m.email);
+          placedInSpecialGroup = true;
+        }
+
+        // 4. Active Roster
+        const grp = (m.group || '').toLowerCase();
+        if (grp === 'active roster' || !placedInSpecialGroup) {
+          groupMap["Active Roster"].push(m);
+          if (m.email) groupEmailsMap["Active Roster"].push(m.email);
+        }
+      });
+    }
+
     function renderDashboard() {
       const container = document.getElementById("directoryContainer");
       const pillsContainer = document.getElementById("filterPills");
       container.innerHTML = "";
       pillsContainer.innerHTML = "";
-      groupEmailsMap = {};
 
-      // Defensive Grouping (Defaulting to 'group' or 'decade' or 'lineYear')
-      const grouped = {};
-      membersData.forEach(m => {
-        const groupKey = m.group || m.decade || (m.line ? parseDecade(m.line) : 'Brotherhood');
-        if (!grouped[groupKey]) {
-          grouped[groupKey] = { title: groupKey, brothers: [] };
-          groupEmailsMap[groupKey] = [];
-        }
-        grouped[groupKey].brothers.push(m);
-        if (m.email) groupEmailsMap[groupKey].push(m.email);
-      });
+      const activeGroupNames = PRIMARY_GROUPS.filter(k => groupMap[k] && groupMap[k].length > 0);
 
-      const groupKeys = Object.keys(grouped).sort((a, b) => b.localeCompare(a));
-
-      // Render "All Brothers" Pill
+      // Render "All Groups" Pill
       const allPill = document.createElement("button");
       allPill.className = "pill-btn active";
-      allPill.innerHTML = `All Brothers <span class="pill-count">${membersData.length}</span>`;
-      allPill.onclick = () => filterByGroup('ALL', allPill);
+      allPill.innerHTML = `All Groups <span class="pill-count">${rawMembers.length}</span>`;
+      allPill.onclick = () => selectPill('ALL', allPill);
       pillsContainer.appendChild(allPill);
 
-      // Render Specific Group Filter Pills
-      groupKeys.forEach(grp => {
+      // Render Group Pills
+      activeGroupNames.forEach(grpName => {
+        const count = groupMap[grpName].length;
         const pill = document.createElement("button");
         pill.className = "pill-btn";
-        pill.innerHTML = `${grp} <span class="pill-count">${grouped[grp].brothers.length}</span>`;
-        pill.onclick = () => filterByGroup(grp, pill);
+        pill.innerHTML = `${grpName} <span class="pill-count">${count}</span>`;
+        pill.onclick = () => selectPill(grpName, pill);
         pillsContainer.appendChild(pill);
       });
 
-      // Render Group Sections & Cards
-      groupKeys.forEach(grp => {
+      // Render Collapsible Group Sections
+      activeGroupNames.forEach(grpName => {
+        const brothers = groupMap[grpName];
         const sec = document.createElement("section");
         sec.className = "group-section";
-        sec.setAttribute("data-group", grp);
+        sec.id = `group-${sanitizeId(grpName)}`;
+        sec.setAttribute("data-group", grpName);
 
         sec.innerHTML = `
-          <div class="group-header">
+          <div class="group-header" onclick="toggleGroup('${sanitizeId(grpName)}')">
             <div class="group-title-wrap">
-              <h2 class="group-name">${grp}</h2>
-              <span class="group-badge">${grouped[grp].brothers.length} Brother${grouped[grp].brothers.length > 1 ? 's' : ''}</span>
+              <h2 class="group-name">${grpName}</h2>
+              <span class="group-badge">${brothers.length} Brother${brothers.length > 1 ? 's' : ''}</span>
             </div>
-            <button class="btn-copy-group" onclick="copyGroupEmails('${grp}')">Copy ${grp} Emails</button>
+            <div class="group-header-actions">
+              <button class="btn-copy-group" onclick="event.stopPropagation(); copyGroupEmails('${grpName}')">Copy Emails</button>
+              <span class="toggle-indicator">&#9660;</span>
+            </div>
           </div>
-          <div class="cards-grid"></div>
+          <div class="cards-grid-wrapper">
+            <div class="cards-grid"></div>
+          </div>
         `;
-        container.appendChild(sec);
 
-        // Scoped query selector to avoid invalid character/space DOM bugs
-        const grid = sec.querySelector('.cards-grid');
+        const grid = sec.querySelector(".cards-grid");
 
-        grouped[grp].brothers.forEach(m => {
-          // Status Badge Evaluation
-          let badgeHtml = '';
-          const stat = (m.chapterStatus || m.status || '').toLowerCase();
-          if (stat.includes('life')) {
-            badgeHtml = `<span class="status-badge badge-life">&#9733; Life Member</span>`;
-          } else if (stat.includes('reclaim')) {
-            badgeHtml = `<span class="status-badge badge-reclaiming">Reclaiming</span>`;
-          } else {
-            badgeHtml = `<span class="status-badge badge-active">Active</span>`;
-          }
-
+        brothers.forEach(m => {
           const card = document.createElement("article");
           card.className = "member-card";
-          card.setAttribute("data-group", grp);
+
+          const isLife = isLifeMember(m);
+          const statusBadge = isLife 
+            ? `<span class="status-badge badge-life">&#9733; Life Member</span>`
+            : `<span class="status-badge badge-active">Active</span>`;
 
           card.innerHTML = `
             <div class="card-top">
               <h3 class="member-name">${m.name || 'Unnamed Brother'}</h3>
               <div class="member-role">${m.role || 'General Member'}</div>
               <div class="member-line">${m.line || ''}</div>
-              ${badgeHtml}
+              ${statusBadge}
             </div>
             <div class="card-details">
               ${m.email ? `
@@ -575,57 +648,81 @@
           `;
           grid.appendChild(card);
         });
+
+        container.appendChild(sec);
       });
     }
 
-    // Defensive decade parser if not provided explicitly in JSON
-    function parseDecade(lineStr) {
-      const match = lineStr.match(/\b(19\d{2}|20\d{2}|'\d{2})\b/);
-      if (match) {
-        let yr = match[0].replace("'", '');
-        if (yr.length === 2) yr = (parseInt(yr, 10) > 40 ? '19' : '20') + yr;
-        const decade = yr.substring(0, 3) + '0s';
-        return decade;
+    function toggleGroup(sanitizedId) {
+      const section = document.getElementById(`group-${sanitizedId}`);
+      if (section) {
+        section.classList.toggle("open");
       }
-      return 'Active Roster';
     }
 
-    // 3. Filtering Logic
-    function filterByGroup(groupKey, pillElement) {
-      activeFilter = groupKey;
+    function selectPill(groupName, pillElement) {
+      currentSelectedGroup = groupName;
       document.querySelectorAll(".pill-btn").forEach(p => p.classList.remove("active"));
       pillElement.classList.add("active");
-      filterDashboard();
+
+      const sections = document.querySelectorAll(".group-section");
+      sections.forEach(sec => {
+        const secGrp = sec.getAttribute("data-group");
+        if (groupName === 'ALL') {
+          sec.style.display = "block";
+          sec.classList.remove("open");
+        } else if (secGrp === groupName) {
+          sec.style.display = "block";
+          sec.classList.add("open");
+        } else {
+          sec.style.display = "none";
+          sec.classList.remove("open");
+        }
+      });
     }
 
-    function filterDashboard() {
+    function handleSearch() {
       const query = document.getElementById("searchInput").value.toLowerCase();
       const sections = document.querySelectorAll(".group-section");
 
       sections.forEach(sec => {
-        const secGroup = sec.getAttribute("data-group");
+        const secGrp = sec.getAttribute("data-group");
         const cards = sec.querySelectorAll(".member-card");
-        let visibleInSec = 0;
+        let visibleCount = 0;
 
         cards.forEach(card => {
-          const text = card.innerText.toLowerCase();
-          const matchesQuery = text.includes(query);
-          const matchesGroup = (activeFilter === 'ALL' || secGroup === activeFilter);
+          const match = card.innerText.toLowerCase().includes(query);
+          const groupMatch = (currentSelectedGroup === 'ALL' || secGrp === currentSelectedGroup);
 
-          if (matchesQuery && matchesGroup) {
+          if (match && groupMatch) {
             card.style.display = "flex";
-            visibleInSec++;
+            visibleCount++;
           } else {
             card.style.display = "none";
           }
         });
 
-        // Hide empty group headers
-        sec.style.display = visibleInSec > 0 ? "block" : "none";
+        if (visibleCount > 0 && query.length > 0) {
+          sec.style.display = "block";
+          sec.classList.add("open");
+        } else if (query.length === 0) {
+          if (currentSelectedGroup === 'ALL' || secGrp === currentSelectedGroup) {
+            sec.style.display = "block";
+            if (currentSelectedGroup !== 'ALL') sec.classList.add("open");
+            else sec.classList.remove("open");
+          } else {
+            sec.style.display = "none";
+          }
+        } else {
+          sec.style.display = "none";
+        }
       });
     }
 
-    // 4. Clipboard Operations
+    function sanitizeId(str) {
+      return str.replace(/[^a-zA-Z0-9]/g, "_");
+    }
+
     function copyText(txt) {
       navigator.clipboard.writeText(txt).then(() => showToast(`Copied: ${txt}`));
     }
@@ -639,7 +736,7 @@
     }
 
     function copyAllEmails() {
-      const all = membersData.map(m => m.email).filter(Boolean);
+      const all = rawMembers.map(m => m.email).filter(Boolean);
       if (!all.length) return showToast("No emails found.");
       navigator.clipboard.writeText(all.join(", ")).then(() => {
         showToast(`Copied ${all.length} chapter emails to clipboard!`);
