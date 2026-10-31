@@ -3,17 +3,157 @@
     {
       "name": "Chris Liddell",
       "role": "President",
-      "line": "Tau Gamma Lambda",
-      "group": "Officer",
+      "line": "Zeta Phi, 11/16/1984",
+      "group": "Active Roster",
       "chapterStatus": "Life Member",
       "email": "cliddell06@bellsouth.net",
       "phone": "901-508-2923",
       "profession": "State Farm Insurance Broker"
     },
     {
+      "name": "Merrill Wade",
+      "role": "Vice President",
+      "line": "Eta Mu, 3/1/1980",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "iammdwade06@gmail.com",
+      "phone": "314-960-8182",
+      "profession": ""
+    },
+    {
+      "name": "Corey Robinson",
+      "role": "Immediate Past President",
+      "line": "Gamma Beta, 2/28/1991",
+      "group": "Charter Member",
+      "chapterStatus": "Active",
+      "email": "crobin31@msn.com",
+      "phone": "678-457-9486",
+      "profession": ""
+    },
+    {
+      "name": "Horace Buckley",
+      "role": "Recording Secretary",
+      "line": "Tau Gamma Lambda, 3/14/2026",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "horaceb1906@gmail.com",
+      "phone": "678-760-9669",
+      "profession": "Assistant Director, Student Support, Gwinnett Schools"
+    },
+    {
+      "name": "Quentin Franklin",
+      "role": "Correspondence Secretary",
+      "line": "Zeta Zeta Lambda, 12/17/1995",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "Qfrank44@gmail.com",
+      "phone": "404-822-0943",
+      "profession": "State Farm Insurance Broker"
+    },
+    {
+      "name": "Curtis Pennyman",
+      "role": "Treasurer",
+      "line": "Xi Tau, 2/6/1987",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "cpennyman@gmail.com",
+      "phone": "",
+      "profession": ""
+    },
+    {
+      "name": "Johnathan Watkins",
+      "role": "Financial Secretary",
+      "line": "Alpha Phi, 11/17/1984",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "jhwatkins3@comcast.net",
+      "phone": "",
+      "profession": ""
+    },
+    {
+      "name": "Steve Lowe",
+      "role": "Sargent-At-Arms",
+      "line": "Gamma Iota, 2/25/1984",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "stevelowe1906@gmail.com",
+      "phone": "",
+      "profession": ""
+    },
+    {
+      "name": "Rodney Spottsville",
+      "role": "Parliamentarian",
+      "line": "Pi, 2/23/1992",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "",
+      "phone": "828-280-3479",
+      "profession": "Retired-Engineer"
+    },
+    {
+      "name": "Gregory Walker",
+      "role": "Chaplain",
+      "line": "Delta Upsilon, 3/2/1975",
+      "group": "Charter Member",
+      "chapterStatus": "Life Member",
+      "email": "gtw1023@gmail.com",
+      "phone": "770-639-6720",
+      "profession": "Retired Marketing Executive"
+    },
+    {
+      "name": "Darrin Morris",
+      "role": "Chairman of Membership-Chapter Dean",
+      "line": "Alpha Alpha, 11/23/1986",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "darrin.morris@icloud.com",
+      "phone": "404-319-9887",
+      "profession": ""
+    },
+    {
+      "name": "Joel Acie",
+      "role": "Historian",
+      "line": "Tau Gamma Lambda, 3/14/2026",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "joelacie1906@gmail.com",
+      "phone": "412-737-2891",
+      "profession": "Business Consultant"
+    },
+    {
+      "name": "W. Keith Harris",
+      "role": "Associate Editor to the Sphinx",
+      "line": "Omicron Kappa, 11/23/1987",
+      "group": "Charter Member",
+      "chapterStatus": "Active",
+      "email": "keith1906@att.net",
+      "phone": "678-508-1287",
+      "profession": ""
+    },
+    {
+      "name": "Abraham Nesmith",
+      "role": "Director of Educational Activities",
+      "line": "Delta Alpha, 5/5/1991",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "abenesmith@hotmail.com",
+      "phone": "678-296-4951",
+      "profession": ""
+    },
+    {
+      "name": "Darryl Matthews",
+      "role": "32nd General President",
+      "line": "Delta Rho, 1/27/1972",
+      "group": "Active Roster",
+      "chapterStatus": "Life Member",
+      "email": "dmatthews1906@gmail.com",
+      "phone": "678-787-8716",
+      "profession": ""
+    },
+    {
       "name": "Corey Montgomery",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Eta Lambda, 11/15/2003",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "coreybiz1@yahoo.com",
@@ -21,20 +161,9 @@
       "profession": ""
     },
     {
-      "name": "Corey Robinson",
-      "role": "Immediate Past President",
-      "line": "Tau Gamma Lambda",
-      "group": "Charter Member",
-      "group": "Officer",
-      "chapterStatus": "Active",
-      "email": "crobin31@msn.com",
-      "phone": "678-457-9486",
-      "profession": ""
-    },
-    {
       "name": "Gregory Crawford",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Alpha Sigma, 4/28/1996",
       "group": "Charter Member",
       "chapterStatus": "Active",
       "email": "dr.gregorycrawford@gmail.com",
@@ -42,20 +171,9 @@
       "profession": ""
     },
     {
-      "name": "Gregory Walker",
-      "role": "Chaplain",
-      "line": "Tau Gamma Lambda",
-      "group": "Charter Member",
-      "group": "Officer",
-      "chapterStatus": "Life Member",
-      "email": "gtw1023@gmail.com",
-      "phone": "770-639-6720",
-      "profession": "Retired Marketing Executive"
-    },
-    {
       "name": "Michael Hudson",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Beta Mu, 11/17/1989",
       "group": "Charter Member",
       "chapterStatus": "Active",
       "email": "mikehud06@gmail.com",
@@ -65,7 +183,7 @@
     {
       "name": "Parker Burton III",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Iota, 4/26/1997",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "parker_burton@yahoo.com",
@@ -75,7 +193,7 @@
     {
       "name": "Rob Rusher",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Gamma Beta, 4/25/1998",
       "group": "Charter Member",
       "chapterStatus": "Active",
       "email": "rushermd@gmail.com",
@@ -85,7 +203,7 @@
     {
       "name": "Stephon Hayes",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Nu Delta, 9/3/1995",
       "group": "Charter Member",
       "chapterStatus": "Active",
       "email": "sahayes06@gmail.com",
@@ -93,20 +211,9 @@
       "profession": ""
     },
     {
-      "name": "W. Keith Harris",
-      "role": "Associate Editor to the Sphinx",
-      "line": "Tau Gamma Lambda",
-      "group": "Charter Member",
-      "group": "Officer",
-      "chapterStatus": "Active",
-      "email": "keith1906@att.net",
-      "phone": "678-508-1287",
-      "profession": ""
-    },
-    {
       "name": "John W. Gilford",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Alpha Alpha, 11/23/1986",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "jwgilford@gmail.com",
@@ -116,7 +223,7 @@
     {
       "name": "Austin Hope",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Nu Mu, 11/21/2009",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "adhope3@gmail.com",
@@ -126,7 +233,7 @@
     {
       "name": "Glendell Brown",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Beta Tau, 9/20/1992",
       "group": "Charter Member",
       "chapterStatus": "Active",
       "email": "glendellbrown1906@gmail.com",
@@ -136,7 +243,7 @@
     {
       "name": "Eric James",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Beta Omicron, 4/4/1998",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "qejames@gmail.com",
@@ -146,7 +253,7 @@
     {
       "name": "Eddie Simms",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Delta Delta, 11/21/1982",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "esixgolfer@aol.com",
@@ -156,7 +263,7 @@
     {
       "name": "Meredith Davis",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Beta Theta, 5/17/1991",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "mdmeredithdavis@gmail.com",
@@ -164,20 +271,9 @@
       "profession": ""
     },
     {
-      "name": "Abraham Nesmith",
-      "role": "Director of Educational Activities",
-      "line": "Tau Gamma Lambda",
-      "group": "Active Roster",
-      "group": "Officer",
-      "chapterStatus": "Active",
-      "email": "abenesmith@hotmail.com",
-      "phone": "678-296-4951",
-      "profession": ""
-    },
-    {
       "name": "Brady Tonth III",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Zeta Phi, 11/21/1992",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "bt190608@gmail.com",
@@ -185,20 +281,9 @@
       "profession": ""
     },
     {
-      "name": "Darrin Morris",
-      "role": "Chairman of Membership-Chapter Dean",
-      "line": "Tau Gamma Lambda",
-      "group": "Active Roster",
-      "group": "Officer",
-      "chapterStatus": "Active",
-      "email": "darrin.morris@icloud.com",
-      "phone": "404-319-9887",
-      "profession": ""
-    },
-    {
       "name": "Demetrius Malbrough",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Beta Omicron, 12/15/1995",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "dmalbrough@gmail.com",
@@ -208,7 +293,7 @@
     {
       "name": "Terrence Reed",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Mu Omicron Lambda, 2/12/1993",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "TMR0728@yahoo.com",
@@ -216,41 +301,9 @@
       "profession": ""
     },
     {
-      "name": "Quentin Franklin",
-      "role": "Correspondence Secretary",
-      "line": "Tau Gamma Lambda",
-      "group": "Active Roster",
-      "group": "Officer",
-      "chapterStatus": "Active",
-      "email": "Qfrank44@gmail.com",
-      "phone": "404-822-0943",
-      "profession": "State Farm Insurance Broker"
-    },
-    {
-      "name": "Merrill Wade",
-      "role": "Vice President",
-      "line": "Tau Gamma Lambda",
-      "group": "Active Roster",
-      "group": "Officer",
-      "chapterStatus": "Active",
-      "email": "iammdwade06@gmail.com",
-      "phone": "314-960-8182",
-      "profession": ""
-    },
-    {
-      "name": "Darryl Matthews",
-      "role": "32nd General President",
-      "line": "Tau Gamma Lambda",
-      "group": "Active Roster",
-      "chapterStatus": "Life Member",
-      "email": "dmatthews1906@gmail.com",
-      "phone": "678-787-8716",
-      "profession": ""
-    },
-    {
       "name": "Kerry Griffin",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Gamma Upsilon, 11/15/1997",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "griffnkry@aol.com",
@@ -258,42 +311,9 @@
       "profession": "Physcician"
     },
     {
-      "name": "Johnathan Watkins",
-      "role": "Financial Secretary",
-      "line": "Tau Gamma Lambda",
-      "group": "Active Roster",
-      "group": "Officer",
-      "chapterStatus": "Active",
-      "email": "jhwatkins3@comcast.net",
-      "phone": "",
-      "profession": ""
-    },
-    {
-      "name": "Curtis Pennyman",
-      "role": "Treasurer",
-      "line": "Tau Gamma Lambda",
-      "group": "Active Roster",
-      "group": "Officer",
-      "chapterStatus": "Active",
-      "email": "cpennyman@gmail.com",
-      "phone": "",
-      "profession": ""
-    },
-    {
-      "name": "Steve Lowe",
-      "role": "Sargent-At-Arms",
-      "line": "Tau Gamma Lambda",
-      "group": "Active Roster",
-      "group": "Officer",
-      "chapterStatus": "Active",
-      "email": "stevelowe1906@gmail.com",
-      "phone": "",
-      "profession": ""
-    },
-    {
       "name": "Leo Hill",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Zeta Pi, 5/23/1975",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "leojhill3@gmail.com",
@@ -303,7 +323,7 @@
     {
       "name": "Leonard Terrell Herring",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Mu Mu, 5/27/1995",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "herring.leonard@gmail.com",
@@ -323,7 +343,7 @@
     {
       "name": "Brandon Reed",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Nu Mu, 11/15/2003",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "reedbr@gmail.com",
@@ -331,30 +351,19 @@
       "profession": ""
     },
     {
-      "name": "Horace Buckley",
-      "role": "Recording Secretary",
-      "line": "Spring'26 - Tau Gamma Lambda",
-      "group": "Active Roster",
-      "group": "Officer",
-      "chapterStatus": "Active",
-      "email": "horaceb1906@gmail.com",
-      "phone": "678-760-9669",
-      "profession": "Assistant Director, Student Support, Gwinnett Schools"
-    },
-    {
       "name": "Mickey Foster",
       "role": "General Member",
-      "line": "Tau Gamma Lambda",
+      "line": "Gamma Sigma Lambda, 4/21/2007",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "mmickeyfoster@gmail.com",
       "phone": "",
       "profession": ""
-    },     
+    },
     {
       "name": "Shelton Marshall",
       "role": "General Member",
-      "line": "Spring, '26 - Tau Gamma Lambda",
+      "line": "Tau Gamma Lambda, 3/14/2026",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "shelton.marshallesq@gmail.com",
@@ -362,106 +371,104 @@
       "profession": "Attorney"
     },
     {
-      "name": "Joel Acie",
-      "role": "Historian",
-      "line": "Spring, '26 - Tau Gamma Lambda",
+      "name": "Christopher Greene",
+      "role": "General Member",
+      "line": "Tau Gamma Lambda",
       "group": "Active Roster",
       "chapterStatus": "Active",
-      "group": "Officer",
-      "email": "joelacie1906@gmail.com",
-      "phone": "412-737-2891",
-      "profession": "Business Consultant"
+      "email": "chrisgreenecontracts@gmail.com",
+      "phone": "256-509-5178",
+      "profession": ""
     },
     {
-    "name": "Christopher Greene",
-    "role": "General Member",
-    "line": "Tau Gamma Lambda",
-    "group": "Active Roster",
-    "chapterStatus": "Active",
-    "email": "chrisgreenecontracts@gmail.com",
-    "phone": "256-509-5178",
-    "profession": ""
-  },
-  {
-    "name": "Deshon Robinson",
-    "role": "General Member",
-    "line": "Tau Gamma Lambda",
-    "group": "Active Roster",
-    "chapterStatus": "Active",
-    "email": "Deshon.robinson12@gmail.com",
-    "phone": "909-641-3001",
-    "profession": ""
-  },
-  {
-    "name": "Fred Green",
-    "role": "General Member",
-    "line": "Tau Gamma Lambda",
-    "group": "Active Roster",
-    "chapterStatus": "Active",
-    "email": "",
-    "phone": "770-714-4116",
-    "profession": "Retired Banker"
-  },
-  {
-    "name": "Jakai Braithwaite",
-    "role": "General Member",
-    "line": "Tau Gamma Lambda",
-    "group": "Active Roster",
-    "chapterStatus": "Active",
-    "email": "jakai1906@gmail.com",
-    "phone": "",
-    "profession": ""
-  },
-  {
-    "name": "Jeffrey Malcolm",
-    "role": "General Member",
-    "line": "Tau Gamma Lambda",
-    "group": "Active Roster",
-    "chapterStatus": "Active",
-    "email": "",
-    "phone": "678-613-1703",
-    "profession": "Investment Specialist"
-  },
-  {
-    "name": "Marshal Shepherd",
-    "role": "General Member",
-    "line": "Tau Gamma Lambda",
-    "group": "Active Roster",
-    "chapterStatus": "Active",
-    "email": "marshgeo@gmail.com",
-    "phone": "404-783-2742",
-    "profession": "Professor- UGA"
-  },
-  {
-    "name": "Rodney Spottsville",
-    "role": "Parliamentarian",
-    "line": "Tau Gamma Lambda",
-    "group": "Active Roster",
-    "group": "Officer",
-    "chapterStatus": "Active",
-    "email": "",
-    "phone": "828-280-3479",
-    "profession": "Retired-Engineer"
-  },
-  {
-    "name": "Tommie Williamson",
-    "role": "General Member",
-    "line": "Tau Gamma Lambda",
-    "group": "Charter Member",
-    "chapterStatus": "Active",
-    "email": "twill1906@gmail.com",
-    "phone": "770-401-0852",
-    "profession": "Photographer"
-  },
-  {
-    "name": "Walter Gregory",
-    "role": "General Member",
-    "line": "Tau Gamma Lambda",
-    "group": "Active Roster",
-    "chapterStatus": "Active",
-    "email": "",
-    "phone": "404-353-2275",
-    "profession": ""
-}
+      "name": "Deshon Robinson",
+      "role": "General Member",
+      "line": "Nu Tau Lambda, 3/4/2017",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "Deshon.robinson12@gmail.com",
+      "phone": "909-641-3001",
+      "profession": ""
+    },
+    {
+      "name": "Fred Green",
+      "role": "General Member",
+      "line": "Alpha Beta, 9/13/1981",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "",
+      "phone": "770-714-4116",
+      "profession": "Retired Banker"
+    },
+    {
+      "name": "Jakai Braithwaite",
+      "role": "General Member",
+      "line": "Omicron Mu Lambda, 11/16/2002",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "jakai1906@gmail.com",
+      "phone": "",
+      "profession": ""
+    },
+    {
+      "name": "Jeffrey Malcolm",
+      "role": "General Member",
+      "line": "Rho Nu, 3/29/1997",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "",
+      "phone": "678-613-1703",
+      "profession": "Investment Specialist"
+    },
+    {
+      "name": "Marshal Shepherd",
+      "role": "General Member",
+      "line": "Iota Delta, 4/7/1988",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "marshgeo@gmail.com",
+      "phone": "404-783-2742",
+      "profession": "Professor- UGA"
+    },
+    {
+      "name": "Tommie Williamson",
+      "role": "General Member",
+      "line": "Omicron Omicron, 4/10/1993",
+      "group": "Charter Member",
+      "chapterStatus": "Active",
+      "email": "twill1906@gmail.com",
+      "phone": "770-401-0852",
+      "profession": "Photographer"
+    },
+    {
+      "name": "Walter Gregory",
+      "role": "General Member",
+      "line": "Zeta Iota, 12/23/1970",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "",
+      "phone": "404-353-2275",
+      "profession": ""
+    },
+    {
+      "name": "Mark McDonald",
+      "role": "General Member",
+      "line": "Mu Omicron, 3/20/2004",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "",
+      "phone": "",
+      "profession": ""
+    },
+    {
+      "name": "Nathaniel Anthony Moultrie",
+      "role": "General Member",
+      "line": "Beta Nu, 3/11/1992",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "namoultrie@gmail.com",
+      "phone": "",
+      "profession": ""
+    }
   ]
 }
