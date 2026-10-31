@@ -349,9 +349,8 @@
       "email": "joelacie1906@gmail.com",
       "phone": "412-737-2891",
       "profession": "Business Consultant"
-
-      [
-  {
+    },
+    {
     "name": "Christopher Greene",
     "role": "General Member",
     "line": "Tau Gamma Lambda",
@@ -401,7 +400,7 @@
     "phone": "678-613-1703",
     "profession": "Investment Specialist"
   },
-    {
+  {
     "name": "Marshal Shepherd",
     "role": "General Member",
     "line": "Tau Gamma Lambda",
