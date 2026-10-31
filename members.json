@@ -4,7 +4,7 @@
       "name": "Chris Liddell",
       "role": "President",
       "line": "Tau Gamma Lambda",
-      "group": "Active Roster",
+      "group": "Officer",
       "chapterStatus": "Life Member",
       "email": "cliddell06@bellsouth.net",
       "phone": "901-508-2923",
@@ -42,13 +42,13 @@
     },
     {
       "name": "Gregory Walker",
-      "role": "General Member",
+      "role": "Chaplain",
       "line": "Tau Gamma Lambda",
       "group": "Charter Member",
       "chapterStatus": "Active",
       "email": "gtw1023@gmail.com",
       "phone": "770-639-6720",
-      "profession": ""
+      "profession": "Retired Marketing Executive"
     },
     {
       "name": "Michael Hudson",
@@ -58,7 +58,7 @@
       "chapterStatus": "Active",
       "email": "mikehud06@gmail.com",
       "phone": "404-456-6119",
-      "profession": ""
+      "profession": "Entreprenuer"
     },
     {
       "name": "Parker Burton III",
@@ -74,11 +74,11 @@
       "name": "Rob Rusher",
       "role": "General Member",
       "line": "Tau Gamma Lambda",
-      "group": "Chapter Member",
+      "group": "Charter Member",
       "chapterStatus": "Active",
       "email": "rushermd@gmail.com",
       "phone": "216-701-1906",
-      "profession": ""
+      "profession": "Physcician"
     },
     {
       "name": "Stephon Hayes",
@@ -92,7 +92,7 @@
     },
     {
       "name": "W. Keith Harris",
-      "role": "General Member",
+      "role": "Associate Editor to the Sphinx",
       "line": "Tau Gamma Lambda",
       "group": "Charter Member",
       "chapterStatus": "Active",
@@ -162,7 +162,7 @@
     },
     {
       "name": "Abraham Nesmith",
-      "role": "General Member",
+      "role": "Director of Educational Activities",
       "line": "Tau Gamma Lambda",
       "group": "Active Roster",
       "chapterStatus": "Active",
@@ -182,7 +182,7 @@
     },
     {
       "name": "Darrin Morris",
-      "role": "General Member",
+      "role": "Chairman of Membership-Chapter Dean",
       "line": "Tau Gamma Lambda",
       "group": "Active Roster",
       "chapterStatus": "Active",
@@ -212,17 +212,17 @@
     },
     {
       "name": "Quentin Franklin",
-      "role": "General Member",
+      "role": "Correspondence Secretary",
       "line": "Tau Gamma Lambda",
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "Qfrank44@gmail.com",
       "phone": "404-822-0943",
-      "profession": ""
+      "profession": "State Farm Insurance Broker"
     },
     {
       "name": "Merrill Wade",
-      "role": "General Member",
+      "role": "Vice President",
       "line": "Tau Gamma Lambda",
       "group": "Active Roster",
       "chapterStatus": "Active",
@@ -247,12 +247,12 @@
       "group": "Active Roster",
       "chapterStatus": "Active",
       "email": "griffnkry@aol.com",
-      "phone": "",
-      "profession": ""
+      "phone": "251-454-0024",
+      "profession": "Physcician"
     },
     {
       "name": "Johnathan Watkins",
-      "role": "General Member",
+      "role": "Financial Secretary",
       "line": "Tau Gamma Lambda",
       "group": "Active Roster",
       "chapterStatus": "Active",
@@ -261,8 +261,18 @@
       "profession": ""
     },
     {
+      "name": "Curtis Pennyman",
+      "role": "Treasurer",
+      "line": "Tau Gamma Lambda",
+      "group": "Active Roster",
+      "chapterStatus": "Active",
+      "email": "cpennyman@gmail.com",
+      "phone": "",
+      "profession": ""
+    },
+    {
       "name": "Steve Lowe",
-      "role": "General Member",
+      "role": "Sargent-At-Arms",
       "line": "Tau Gamma Lambda",
       "group": "Active Roster",
       "chapterStatus": "Active",
@@ -424,11 +434,11 @@
     "name": "Tommie Williamson",
     "role": "General Member",
     "line": "Tau Gamma Lambda",
-    "group": "Active Roster",
+    "group": "Charter Member",
     "chapterStatus": "Active",
     "email": "twill1906@gmail.com",
     "phone": "770-401-0852",
-    "profession": ""
+    "profession": "Photographer"
   },
   {
     "name": "Walter Gregory",
